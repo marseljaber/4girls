@@ -380,7 +380,7 @@ const Index = () => {
                   variant="secondary"
             className="bg-white text-purple-700 hover:bg-gray-100"
 >
-           <a href="/Management-System-Diagram-Automation (4) (1).zip" download>
+           <a href="https://drive.google.com/uc?export=download&id=1PU7XWGpmuodOSB0jLePGljI6lrHoC_hL" download>
                   <Github className="mr-2" size={16} />
                   Download UML Generator
                  </a>
