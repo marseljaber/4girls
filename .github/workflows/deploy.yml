@@ -1,6 +1,5 @@
 name: Deploy Vite React App to GitHub Pages
 
-# Trigger workflow on any push to main
 on:
   push:
     branches:
@@ -11,28 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout your repository
       - uses: actions/checkout@v3
 
-      # 2. Setup Node.js
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 4. Build the Vite project
       - name: Build
         run: npm run build
 
-      # 5. Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          # Force creation of branch if it doesn't exist
           force_orphan: true
+          allow_empty_commit: true
+          keep_files: false
