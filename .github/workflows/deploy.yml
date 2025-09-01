@@ -28,5 +28,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          user_name: "marseljaber"
-          user_email: "marseljaber11@gmail.com"
