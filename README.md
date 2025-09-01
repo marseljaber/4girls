@@ -54,7 +54,7 @@ npm run dev
 
 This project is built with:
 
-- Vite
+- Vite 
 - TypeScript
 - React
 - shadcn-ui
@@ -64,7 +64,7 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/a9fdfc66-887b-4df8-bad3-05a43e9059a3) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my Lovable project ?
 
 Yes, you can!
 
