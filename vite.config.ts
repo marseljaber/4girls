@@ -4,7 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/4girls/" : "/", // ← important!
+  // Use relative paths for GitHub Pages deployment
+  base: "./",  // ← important: ensures JS/CSS load correctly
   server: {
     host: "::",
     port: 8080,
