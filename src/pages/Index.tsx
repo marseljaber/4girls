@@ -47,7 +47,7 @@ const Index = () => {
       <section id="home" className="py-20 px-6">
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-            D evelopment of a UML Diagram Generation System
+            Development of a UML Diagram Generation System
           </h2>
           <p className="text-xl text-gray-700 mb-4">
             Using Language Models
