@@ -328,6 +328,78 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Our System Prompts Section */}
+<section id="system-prompts" className="py-20 px-6 bg-gradient-to-r from-purple-50 to-pink-50">
+  <div className="container mx-auto max-w-6xl">
+    <div className="text-center mb-16">
+      <h3 className="text-4xl font-bold mb-4 text-gray-800">Our System Prompts</h3>
+      <p className="text-lg text-gray-600">
+        Example prompts used by our UML generation system for GPT-4.1
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+
+      {/* Generate UML */}
+      <Card className="border-purple-200 hover:shadow-lg transition-all">
+        <CardHeader>
+          <CardTitle className="text-purple-700">Generate UML Diagram</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <pre className="bg-purple-50 p-4 rounded-lg overflow-x-auto text-sm text-gray-700">
+{`You are an expert in UML diagram generation.
+The user will describe a system and request a specific UML type (class, use case, sequence).
+Return only valid PlantUML code starting with @startuml and ending with @enduml.
+Do NOT include markdown, explanations, or !include statements.
+
+System description: [user input]`}
+          </pre>
+        </CardContent>
+      </Card>
+
+      {/* Modify UML */}
+      <Card className="border-pink-200 hover:shadow-lg transition-all">
+        <CardHeader>
+          <CardTitle className="text-pink-700">Modify Existing UML Diagram</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <pre className="bg-pink-50 p-4 rounded-lg overflow-x-auto text-sm text-gray-700">
+{`You are a UML code editor.
+Update the given PlantUML code based on the user's instruction.
+Do NOT regenerate the whole diagram; keep all unchanged parts intact.
+Return ONLY valid PlantUML code starting with @startuml and ending with @enduml.
+
+Current UML Code: [previous code]
+
+User Instruction: [user input]`}
+          </pre>
+        </CardContent>
+      </Card>
+
+      {/* Explain UML */}
+      <Card className="border-purple-200 hover:shadow-lg transition-all">
+        <CardHeader>
+          <CardTitle className="text-purple-700">Explain UML Diagram</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <pre className="bg-purple-50 p-4 rounded-lg overflow-x-auto text-sm text-gray-700">
+{`You are an expert UML analyst.
+A user has given valid PlantUML code.
+Explain the diagram directly based on the code.
+Focus ONLY on the code elements.
+Identify diagram type (class, use case, sequence),
+list elements, and describe relationships.
+
+PlantUML Code: [uml code]`}
+          </pre>
+        </CardContent>
+      </Card>
+
+    </div>
+  </div>
+</section>
+
+
       {/* Takeaways & Evaluation */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
